@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+      annotations:
+        kubectl.kubernetes.io/restartedAt: "2023-04-27T10:42:24Z"
+    spec:
+      containers:
+      - name: api
+        image: LINK_IMAGE_OF_YOUR_API_DOCKER_HUB_OR_OTHER_REGISTRY
+        envFrom:
+        - configMapRef:
+            name: api-config
+        ports:
+        - containerPort: 3000

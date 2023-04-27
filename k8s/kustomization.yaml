@@ -1,0 +1,8 @@
+resources:
+  - configmap/api-configmap.yaml
+  - deployment/api-deployment.yaml
+  - service/api-service.yaml
+  - configmap/portal-configmap.yaml
+  - deployment/portal-deployment.yaml
+  - service/portal-service.yaml
+  - ingress/ingress.yaml

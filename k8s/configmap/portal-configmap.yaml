@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: portal-env-config
+data:
+  NODE_ENV: development
+  NEXT_PUBLIC_API_URL: https://api.domain.name
